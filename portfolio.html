@@ -10,13 +10,14 @@
 <body>
 
     <!-- Header section -->
-    <div class="container">
-        <header>
+    <header class="main-header">
+        <div class="container">
             <div class="main-header__brand">
                 <a href="index.html">
                     <img src="./Images/logo.png" alt="Logo">
                 </a>
             </div>
+
             <nav class="main-navigation">
                 <ul class="main-navigation-items">
                     <li class="main-navigation__item active">
@@ -42,38 +43,40 @@
                     </li>
                 </ul>
             </nav>
-        </header>
-    </div>
+        </div>    
+    </header>  
     <!-- /Header section -->
 
     <!-- Main section -->
-    <div class="container">
-        <section id="main-section" class="main-section">
-            <div class="main-section-info">
-                <h4 class="main-section__welcome to-uppercase">Salom hammaga!</h4>
-            <h1 class="main-section__introduction to-uppercase">I am Zaylobiddinov</h1>
-            <h3 class="main-section-position to-uppercase">Senior (katta) dasturchi</h3>
-            <div class="main-section__social-networks">
-                <a href="https://t.me/zaylobiddinovbekhzod">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://youtube.com/ulugbeksamigjonov">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://instagram.com/ulugbeksamigjonov">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-            <button type="button" class="button main-section__action to-uppercase">
-                Ishlarim ko'ring
-            </button>
+    <div class="main-banner">
+        <div class="container">
+            <section id="main-section" class="main-section">
+                <div class="main-section-info">
+                    <h4 class="main-section__welcome to-uppercase">Salom hammaga!</h4>
+                    <h1 class="main-section__introduction to-uppercase">I am Zaylobiddinov</h1>
+                    <h3 class="main-section-position to-uppercase">Senior (katta) dasturchi</h3>
+                    <div class="main-section__social-networks">
+                        <a href="https://t.me/zaylobiddinovbekhzod">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://youtube.com/ulugbeksamigjonov">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://instagram.com/ulugbeksamigjonov">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <button type="button" class="button main-section__action to-uppercase">
+                        Ishlarim ko'ring
+                    </button>
+                </div>
+                <div class="main-section__image">
+                    <img src="./Images/me.png" alt="main-section__image">
+                </div>
+             </section>
+        <div class="clearfix"></div>
         </div>
-        <div class="main-section__image">
-                <img src="./Images/me.png" alt="main-section__image">
-        </div>
-    </section>
-    <div class="clearfix"></div>
-    </div>
+    </div>  
     <!-- /Main section -->
 
     <!-- Statistics -->
@@ -220,9 +223,68 @@
     <!-- /Clients section -->
 
     <!-- Portfolio section -->
-    <section id="portfolio">
-        <h1>Portfolio </h1>
-    </section>
+   <div class="container">
+        <section id="portfolio" class="portfolio">
+            <div class="section-subtitle">
+                Mening Ishlarim
+                <span class="blur-line"></span>
+            </div>
+            <div class="section-title">
+                Mening oxirgi <br>
+                ishlarimni ko'ring
+            </div>
+            <ul class="portfolio-filters">
+                <li class="active">
+                    Hammasi
+                </li>
+                <li>
+                    Mashhurlari
+                </li>
+                <li>
+                    Oxirgilari
+                </li>
+            </ul>
+            <div class="portfolio-items">
+                <div class="portfolio-item portfolio-item-1">
+                    <img src="./Images/portfolio-1.jpg" alt="Portfolio item 1" class="portfolio-item__image">
+                    <div class="portfolio-item__overlay"></div>
+                    <div class="portfolio-item__info">
+                        <h4>
+                            <a href="#">Portfolio item 1</a>
+                        </h4>
+                        <p>
+                            Ishim haqida
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio-item portfolio-item-2">
+                    <img src="./Images/portfolio-2.jpg" alt="Portfolio item 2" class="portfolio-item__image">
+                    <div class="portfolio-item__overlay"></div>
+                    <div class="portfolio-item__info">
+                        <h4>
+                            <a href="#">Portfolio item 2</a>
+                        </h4>
+                        <p>
+                            Ishim haqida
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio-item portfolio-item-3">
+                    <img src="./Images/portfolio-3.jpg" alt="Portfolio item 3" class="portfolio-item__image">
+                    <div class="portfolio-item__overlay"></div>
+                    <div class="portfolio-item__info">
+                        <h4>
+                            <a href="#">Portfolio item 3</a>
+                        </h4>
+                        <p>
+                            Ishim haqida
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+   </div>
+
     <!-- /Portfolio section -->
 
     <!-- Blog section -->
@@ -264,7 +326,6 @@
                 </li>
             </ul>
         </nav>
-        <h4>Ulugbek Samigjonov</h4>
     </footer> 
     <!-- /Footer section  -->
 </body>
