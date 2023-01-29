@@ -1,20 +1,19 @@
 /* Contact section styles */
 .contact {
-    padding: 6.25rem;
+    padding: 6.25rem 1.25rem; /* 25 / 4 = 6.25 ||20 / 16 1.25 */
 }
 
 textarea, input {
     width: 100%;
-    padding: 0.88rem;
-    margin-top: 0.63rem;
-    margin-bottom: 0.63rem;
-    cursor: pointer;
-    border-radius: 5px;
+    padding: 0.88rem; /* 14 / 16 = 0.88 */
+    margin-top: 0.88rem;
     border: 1px solid #f0e9ff;
-    padding-left: 1.125rem;
-    font-size: 13px;
+    border-radius: 5px;
+    padding-left: 1.13rem; /* 18 / 16 = 1.13 */
+    font-size: 0.81rem; 
     background: transparent;
     color: #495057;
+    box-sizing: border-box;
 }
 
 textarea:focus,
@@ -22,35 +21,31 @@ input:focus {
     outline: 0;
 }
 
-.half-flex {
+.half-flex{
     display: flex;
 }
-
-.contact__firstname {
-    padding-right: 0.94rem;
-    flex: 1; 
-}
-
-.contact-email {
-    padding-right: 0.94rem;
+.contact-firstname {
+    padding-right: 0.94rem; 
     flex: 1;
 }
 
-.contact__button {
-    margin-top: 1.25rem;
+.contact-email {
+    padding-left: 0.94rem;
+    flex: 1;
 }
 
-/* RWD */
+.contact-button {
+    margin-top: 1.88rem;
+}
+
 @media only screen and (max-width: 991px) {
-    .half-flex {
+    .half-flex{
         flex-direction: column;
     }
 
-    .contact__firstname, 
+    .contact-firstname,
     .contact-email {
         padding: 0;
     }
 }
-
-
 

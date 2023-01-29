@@ -118,21 +118,24 @@
          url('../fonts/roboto-v30-latin-900italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/roboto-v30-latin-900italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-/* Core styles */
-html {
-    scroll-behavior: smooth;
-}
+
+  /* Core styles */
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    font-family: 'Roboto' sans-serif;
 }
 
 a {
     transition: all 0.3s ease-in-out;
 }
 
+button {
+    font-family: inherit;
+    transition: all 0.3s ease-in-out;
+}
+
 .container {
-    width: 1140px;
+    width: 1144px;
     margin: 0 auto;
 }
 
@@ -140,19 +143,23 @@ a {
     text-transform: uppercase;
 }
 
+.clearfix {
+    clear: both;
+}
+
 .section-subtitle {
     letter-spacing: 2px;
     font-weight: 500;
-    margin-bottom: 0.63rem;
+    margin-bottom: 0.625rem; /* 10 / 16 = 0.625rem*/
     color: #797979;
     text-transform: uppercase;
 }
 
 .section-title {
-    margin-top: 0.31rem;
-    text-transform: capitalize;
-    font-size: 2.31rem; /* 42 / 16 = 2.31rem*/
+    margin-top: 0.32rem; 
+    font-size: 2.63rem; /* 42 / 16 = 2.625rem */
     font-weight: 700;
+    text-transform: capitalize;
     color: #05364d;
 }
 
@@ -162,11 +169,10 @@ a {
     background-size: 200% auto;
     color: #FFFFFF;
     font-weight: 500;
-    font-size: 0.88rem;
-    padding: 1.25rem 2.5rem;
+    font-size: 0.88rem; /* 14 / 16 = 0.88rem */
+    padding: 1.25rem 2.5rem; /* 20 / 16 =1.25 rem || 40 / 16 = 2.5rem */
     cursor: pointer;
     border-radius: 5px;
-    transition: all 0.3 ease-in-out;
 }
 
 .button:hover {
@@ -174,23 +180,19 @@ a {
 }
 
 .blur-line {
-    display: inline-block;
     position: relative;
     top: -2px;
-    font-size: 0.31rem;
+    display: inline-block;
+    margin-left: 0.94rem; /* 15 / 16 = 0.94rem */
     width: 80px;
     height: 4px;
     background-color: rgba(237, 35, 159, 0.6);
     filter: blur(4px);
     border-radius: 4px;
-}
+    margin-bottom: 0.125 rem; /* 2 / 16 = 0.125 */
+ }
 
-.clearfix {
-    clear: both;
-}
-
-/* Main-header styles */
-
+/* Header section  styles*/
 .main-header {
     position: fixed;
     top: 0;
@@ -200,24 +202,27 @@ a {
     box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 10%);
     z-index: 10;
 }
+
 .main-header .container {
     display: flex;
     align-items: center;
 }
+
 .main-header__brand img {
     width: 64px;
+    display: inline;
 }
 
 .main-navigation__item {
     display: inline-block;
-    padding: 10px;
-}
+    padding: 0.625rem; /* 10 / 16 = 0.625rem */ 
 
+}
 .main-navigation__item a {
     text-decoration: none;
     color: #05364d;
     text-transform: uppercase;
-    font-size: 0.75rem ; /* 12 / 16 = 0.75*/
+    font-size: 0.75rem; /* 12 / 16 = 0.75rem*/
     font-weight: 500;
 }
 
@@ -229,45 +234,41 @@ a {
     color: #efb6df;
 }
 
+
+
 /* Footer section styles */
 .footer {
-    padding: 6.25rem 0;
-    margin-top: 3.125rem;
+    margin-top: 3.13rem;
+    padding: 3.13rem 0;
     background-color: #021017;
     text-align: center;
 }
 
 .footer__brand img {
-    width: 64px;
+    width: 4rem; /* 64 / 16 = 4 */
 }
 
-.main-navigation__items {
-    margin-bottom: 3.125rem;
-}
-
-.footer-navigation__item {
+.footer__navigation-item {
     display: inline-block;
     padding: 0 0.63rem;
 }
 
-.footer-navigation__item a {
+.footer__navigation-item a {
+    color: #FFFFFF;
     text-decoration: none;
-    color: white;
 }
 
 .footer__social {
     display: inline-block;
     width: 45px;
     height: 45px;
-    line-height: 2.81rem; /* 45 / 16 = 2.81rem */
+    line-height: 45px;
     text-align: center;
-    background: #FFFFFF;
     border-radius: 36px;
-    color: #05364d;
+    background: #FFFFFF;
     font-size: 1rem;
-    margin-right: 0.75rem;
+    margin-right: 0.75rem; /* 12 / 16 = 0.75 */
 }
-
 .footer__social:hover {
     background: linear-gradient(90deg, #1345e6 0%, #ed239f 100%);
 }
@@ -276,28 +277,31 @@ a {
     color: white;
 }
 
+
 .footer__social a {
     color: #021017;
 }
 
 .footer__text {
-    color: #797979;
+    color: hsl(119, 34%, 25%);
+}
+.footer__text-author {
+    color: #79224dea;
 }
 
 /* RWD lardan foldalanib loyihamizni yanada yaxshiroq ko'rinishga keltirish */
 
-@media
- only screen and (max-width: 991px) {
+@media only screen and (max-width: 991px) {
     .container {
         width: 90%;
     }
-      /* Navigation */
+      /* Navigation menu */
       .main-navigation {
         display: none;
     }
 
     /* Footer */
-    .footer-navigation {
+    .footer__navigation-item {
         display: none;
     }
 }
@@ -306,6 +310,4 @@ a {
     .container {
         width: 92%;
     }
-  
-
 }
